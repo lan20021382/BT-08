@@ -1,0 +1,42 @@
+// 1.
+địa chỉ của 2 biến là x và y là trùng nhau bởi vì nó được khai báo cùng nhau và cùng kiểu int
+
+// 2.
+b) int main( )
+{
+   int  a[4] = {1,2,3,4};
+   for (int i=0;i<4;i++) {
+      cout << (void*) a[i] << " : " << (*a[i]) << endl;
+   }
+   return 0;
+}
+c) int main( )
+{
+   double  a[4] = {1,2,3,4};
+   for (int i=0;i<4;i++) {
+      cout << (void*) a[i] << " : " << (*a[i]) << endl;
+   }
+   return 0;
+}
+d)vì + thêm 2 mà kiểu dữ liệu là double nên chênh lệch nhau 16
+3.)
+void swap_pointers(char* x, char* y)
+{
+   char *tmp;
+   tmp = x;
+   x = y;
+   y = tmp;
+}
+int main()
+{
+   char a[] = "I should print second";
+   char b[] = "I should print first";
+
+   char *s1 = a;
+   char *s2 = b;
+   swap_pointers(s1,s2);
+   cout << "s1 is " << s1 << endl;
+   cout << "s2 is " << s2 << endl;
+   return 0;
+}
+
